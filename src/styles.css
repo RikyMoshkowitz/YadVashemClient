@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+.transitional-background {
+    background-image: linear-gradient(to bottom, #007bff,rgb(56, 56, 192)); /* Blue to white gradient */
+    animation: transitionAnimation 10s ease infinite;
+  }
+  
+  @keyframes transitionAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }

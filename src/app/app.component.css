@@ -1,0 +1,60 @@
+body{
+  direction: rtl;
+  float: right;
+  display: flex;
+  justify-content: center!important;
+  align-items: center! important;
+}
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+    float: right;
+  }
+  #ca:visited{
+    color: rgb(241, 164, 164);
+  }
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    float: right;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  mat-toolbar{
+    background-color: #fffff100;
+    float: right;
+    z-index: 1;
+  }
+  .a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .a:active{
+    /* text-decoration: underline; */
+    color: rgb(241, 164, 164);
+    cursor: pointer;
+  }
+  .myHeader{
+    direction: rtl;
+  }
+  .mat-toolbar-row{
+    float: right;
+  }
+  mat-toolbar-row.mat-toolbar-row{
+    flex-direction: row-reverse;
+    float: right;
+    background-color: #63B5B2;
+  }
+  .secondTitle{
+    color: white;
+    font-size: 2rem;
+  }
+  .nakatz{
+    background-color: #63B5B2;
+  }
+  

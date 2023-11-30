@@ -1,0 +1,54 @@
+<div>
+    <div class="container">
+        <div class="button-container">
+            <button mat-button (click)="loadList('Evening')" class="mat-button button-option"
+                [ngClass]="{ 'active': selectedButton === 'Evening' }">אחה"צ</button>
+            <button mat-button (click)="loadList('Noon')" class="mat-button button-option"
+                [ngClass]="{ 'active': selectedButton === 'Noon' }">צהריים</button>
+            <button mat-button (click)="loadList('Morning')" class="mat-button button-option"
+                [ngClass]="{ 'active': selectedButton === 'Morning' }">בוקר</button>
+        </div>
+    </div>
+
+    <div *ngIf="selectedTime === 'Evening'">
+        <div class="card-container">
+            <mat-card *ngFor="let item of eveningHours" class="card" (click)="keepChosen(item)"
+                [ngClass]="{ 'disabled': item.condition === 'סגור' || item.condition === 'אזל' || item.availablePlaces < amountOfPeople }">
+                <mat-card-content>
+                    <h3>{{ item.startTime}}</h3>
+                    <p>{{ item.condition }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div *ngIf="selectedTime === 'Noon'">
+        <div class="card-container">
+            <mat-card *ngFor="let item of noonHours" class="card" (click)="keepChosen(item)"
+                [ngClass]="{ 'disabled': item.condition === 'סגור' || item.condition === 'אזל' || item.availablePlaces < amountOfPeople }">
+                <mat-card-content>
+                    <h3>{{ item.startTime}}</h3>
+                    <p>{{ item.condition }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+
+    <div *ngIf="selectedTime === 'Morning'">
+        <div class="card-container">
+            <mat-card *ngFor="let item of morningHours" class="card" (click)="keepChosen(item)"
+                [ngClass]="{ 'disabled': item.condition === 'סגור' || item.condition === 'אזל' || item.availablePlaces < amountOfPeople }">
+                <mat-card-content>
+                    <h3>{{ item.startTime}}</h3>
+                    <p>{{ item.condition }}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+    <div class="route-button-container">
+        <button mat-button class="button" (click)="onContinueClicked()"
+            [ngClass]="{ 'active': continue_repeat_button === 'continue' }">המשך</button>
+        <button mat-button class="button" (click)="onRepeatClicked()"
+            [ngClass]="{ 'active': continue_repeat_button === 'repeat' }">חזור</button>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Ensures that the entire viewport height is covered */
+}
+
+.custom-input {
+    width: 300px;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Adjust the height as needed */
+    border-color: rgb(3, 3, 107);
+    border-style: solid;
+}
+
+.custom-input input {
+
+    font-size: 24px;
+    /* Adjust the font size as needed */
+    font-weight: bold;
+    text-align: center;
+}
+
+.label {
+    color: white;
+    font-size: large;
+    padding-left: 2%;
+}

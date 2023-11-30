@@ -1,0 +1,9 @@
+<div class="container">
+  <mat-form-field class="custom-input">
+    <input matInput type="number" #box (keyup.enter)="OnEnter(box.value)">
+  </mat-form-field>
+  <span class="label">:מספר המבקרים</span>
+</div>
+<div *ngIf="showOrderManager">
+  <app-order-manager></app-order-manager>
+</div>
